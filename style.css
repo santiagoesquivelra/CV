@@ -1,112 +1,102 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>HojaDeVida</title>
-</head>
-<body>
+:root {
+    --color-titulos: black;
+    --color-stitulos: rgb(107, 102, 102);
+}
 
-    <div class="left-side">
-       
-        <div class="contacto">
-            <a class="foto" href="mifoto.jpg"><img src="./Imagenes/foto.png" alt="lafoto"></a>
-            <h4>CONTACTO</h4>
+body {
+    display: flex;
+    flex: auto;
+    margin: 0px;
+    width: 100%;
+    font-family: Verdana;
+}
 
-            <div class="iconos">
-                <div class="iconos-phone">
-                    <a href="..."><img src= "./Imagenes/phone.png" alt="number">(320) 463-8760</img></a>
-                </div>
-                <div class="iconos-contact">
-                    <a href="..."><img src="./Imagenes/contact.png" alt="persona">santiagoer702@gmail.com</img></a>
-                </div>
-                <div class="iconos-mail">
-                    <a href=""><img src="./Imagenes/mail.png" alt="correo">santiago.esquiveldev@gmail.com</img></a>
-                </div>
-            </div>
-            <h4>IDIOMAS</h4>
-            <p>Español(nativo)</p>
-            <p>Inglés (Intermedio) - B1</p>
+.left-side {
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+    padding-top: 32.16px;
+    float: left;
+    width: auto;
+}
 
-            <h4>EDUCACIÓN</h4>
-            <h5>2020-2024(1S)</h5>
-            <p>Profesional en ingeniería de sistemas</p>
-            <b>Universidad Jorge Tadeo Lozano</b>
+.right-side {
+    display: inline-block;
+    justify-content: right;
+    margin: 0px;
+    padding-right: 20px;
+    width: auto;
+    text-align: justify;
+}
 
-            <h5>2023</h5>
-            <p>Frontend Developer</p>
-            <p>Curso Profesional de Git y GitHub</p>
-            <p>Manejo profesional de terminal Linux/SSH</p>
-            <b>Platzi/Udemy/LinkedIn</b>
+h4 {
+    color: var(--color-stitulos);
+}
 
-        </div>
-        
-    </div>
+.nombre {
+    margin: auto;
+    text-align: center;
+    font-size: x-large;
+}
+
+.nombre h3 {
+    margin: 0;
+}
+
+.skills h5 {
+    background-color: rgba(199, 191, 191, 0.733);
+    text-align: center;
+    padding: 10px;
+}
+
+.exp {
+    justify-content: center;
+    margin: 0;
+}
+
+.exp_lab h5{
+    display: flex;
+    padding: 0px;
+    margin: 0;
+}
+
+.exp_lab h4 {
+    margin-bottom: 10px;
+}
+
+.contacto p, b {
+    font-size: small;
     
-    <div class="right-side"> 
-        <div class="nombre"> 
-            <h1>SANTIAGO ESQUIVEL</h1>
-            <h3>INGENIERO DE SISTEMAS</h3>
-        </div>
-        
-        <h4>SOBRE MÍ</h4>
+}
 
-        <p>Estudiante de ingeniería de sistemas de octavo
-            semestre con conocimientos intermedios en
-            programación en Java, Python y JavaScript, y
-            experiencia en los frameworks Django, Spring Boot,
-            Angular y React JS. Apasionado por la tecnología y los
-            videojuegos, con experiencia en redes de
-            computadoras, sistemas distribuidos e ingeniería de
-            software.
-        </p>
+.foto {
+    display: flex;
+    flex-direction: column;    
+}
 
-        <div class="skills">
-            <h4>HABILIDADES TÉCNICAS</h4>
-            <h5>Lenguajes de programación: Java, Python, JavaScript.</h5>
-            <h5>Frameworks: Django, Spring Boot, Angular, React JS.</h5>
-            <h5>Bases de datos: SQL, OracleSQL, MongoDB, MariaDB.</h5>
-        </div>
-        <h4>EXPERIENCIA EN SISTEMAS</h4>
-        <ul class="exp">
-            <li>Proyectos académicos y personales en Java, Python
-                y JavaScript.
-            </li>
-            <li>Desarrollo de aplicaciones web utilizando los
-                frameworks Django, Spring Boot, Angular y React JS.
-            </li>
-            <li>Conocimiento de buenas prácticas de desarrollo y
-                diseño de software.
-            </li>
-            <li>Experiencia en la implementación de bases de datos
-                relacionales y no relacionales.
-            </li>
-            <li>Apasionado por la tecnología, la innovación y los
-                videojuegos
-            </li>
-            <li>Participante activo en hackathons y competencias
-                de programación. (Dos participaciones de la maratón
-                nacional de programación ICPC)
-            </li>
-            <li>Conocimiento de protocolos de red, como TCP/IP y
-                DNS.
-            </li>
-            <li>Experiencia en la implementación de sistemas
-                distribuidos y arquitecturas cliente-servidor.
-            </li>
-        </ul>
+.iconos a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: Verdana;
+    font-size: small;
+    color: var(--color-titulos);
+    padding-left: 0px;
+}
 
-        <div class="exp_lab">
-            <h4>EXPERIENCIA LABORAL</h4>
-            <h5>2020 - 2022 Teleperformance</h5>
-            <P>Técnico de TI a través de un CRM para asignación de roles, permisos, y contraseñas.
-            </P>
-            <h5>2019 - 2020 OneLink</h5>
-            <p>Primera experiencia laboral como asesor de servicio al cliente-servidor
-                semi-bilingüe para la campaña de GoDaddy.com
-            </p>
-        </div>
-    </div>
-</body>
-</html>
+.iconos img {
+    padding: 5px;
+    height: 30px;
+}
+
+h4 {
+    font-size: large;
+}
+
+.exp_lab h5 {
+    font-size: medium;
+}
+
+.exp {
+    padding-left: 20px;
+}
