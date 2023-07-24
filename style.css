@@ -1,36 +1,43 @@
 :root {
-    --color-titulos: black;
-    --color-stitulos: rgb(107, 102, 102);
+    --color-titulos: #727272;
+    --color-stitulos: #323232;
+    --color-yellow: #F1B43E;
 }
 
 body {
     display: flex;
     flex: auto;
-    margin: 0px;
-    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
     font-family: Verdana;
+    background-color: #FCFBF7;
+    height: 297mm;
+    width: 230mm;
 }
 
 .left-side {
     display: flex;
     justify-content: left;
-    padding: 20px;
-    padding-top: 32.16px;
     float: left;
     width: auto;
+    margin: 0;
 }
 
 .right-side {
     display: inline-block;
     justify-content: right;
-    margin: 0px;
-    padding-right: 20px;
+    padding-left: 32px;
     width: auto;
     text-align: justify;
 }
 
+.right-side p {
+    color: var(--color-titulos);
+}
+
 h4 {
-    color: var(--color-stitulos);
+    color: var(--color-yellow);
+    font-size: large;
 }
 
 .nombre {
@@ -47,6 +54,8 @@ h4 {
     background-color: rgba(199, 191, 191, 0.733);
     text-align: center;
     padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.04);
 }
 
 .exp {
@@ -54,7 +63,7 @@ h4 {
     margin: 0;
 }
 
-.exp_lab h5{
+.exp_lab h5 {
     display: flex;
     padding: 0px;
     margin: 0;
@@ -64,22 +73,70 @@ h4 {
     margin-bottom: 10px;
 }
 
-.contacto p, b {
-    font-size: small;
-    
+.card {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border-radius: 24px;
+    box-shadow: 0px 6px 50px 0px;
+    background: #FFF;
+}
+
+.card h4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 5px;
+    margin: 0;
+    color: var(--color-yellow);
+}
+
+.contacto {
+    background-color: whitesmoke;
+    border-radius: 24px;
+}
+
+.contacto p {
+    font-size: 14px;
+    color: var(--color-titulos);
+}
+
+.estudios {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.estudios h5 {
+    font-size: 14px;
 }
 
 .foto {
     display: flex;
-    flex-direction: column;    
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+    padding: 32px;
+    margin-bottom: 0;
+}
+
+li {
+    color: var(--color-titulos);
+}
+
+.iconos {
+    padding-bottom: 24px;
 }
 
 .iconos a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-family: Verdana;
-    font-size: small;
+    font-size: 13px;
     color: var(--color-titulos);
     padding-left: 0px;
 }
@@ -89,14 +146,18 @@ h4 {
     height: 30px;
 }
 
-h4 {
-    font-size: large;
-}
-
 .exp_lab h5 {
     font-size: medium;
 }
 
 .exp {
     padding-left: 20px;
+}
+
+@media print {
+    body {
+        width: 21cm;
+        height: 29.7cm;
+        margin: 30mm 45mm 30mm 45mm;
+    }
 }
