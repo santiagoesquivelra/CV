@@ -4,6 +4,10 @@
     --color-yellow: #F1B43E;
 }
 
+html {
+    background-color: #FFF;
+}
+
 body {
     display: flex;
     flex: auto;
@@ -11,8 +15,9 @@ body {
     padding: 40px;
     font-family: Verdana;
     background-color: #FCFBF7;
-    height: 297mm;
+    border: 1px solid var(--color-stitulos);
     width: 230mm;
+    border-radius: 24px;
 }
 
 .left-side {
