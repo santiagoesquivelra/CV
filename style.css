@@ -1,17 +1,21 @@
 :root[data-tema="light"] {
-    --bg-color: #FFF;
+    --bg-color: #FCFBF7;
+    --atras-color: #000;
     --show-sol: block;
     --show-luna: none;
     --text-color: #212221;
     --mensaje-modo: "Modo claro";
     --animacion-sol: rotate 15s linear infinite;
-    --color-switch: #3B96FF;
+    --color-switch: #c7bfc7;
     --color-activo: #c1c1c1;
     --border-option: 20px solid #fff;
+    --card-color: #FFF;
+    --skills-color: whitesmoke;
 }
 
  :root[data-tema="dark"] {
     --bg-color: #212224;
+    --atras-color: #FFF;
     --show-sol: none;
     --show-luna: block;
     --text-color: #FFF;
@@ -20,12 +24,19 @@
     --color-switch: #c4c4c4;
     --color-activo: #FFF;
     --border-option: none;
+    --card-color: #333639;
+    --skills-color: #000;
+    --transform-option: translateX(100%);
 }
 
  :root {
     --color-titulos: #727272;
     --color-stitulos: #323232;
     --color-yellow: #F1B43E;
+}
+
+html {
+    background-color: var(--card-color);
 }
 
 body {
@@ -35,7 +46,7 @@ body {
     padding: 40px;
     font-family: 'Raleway', sans-serif;
     background-color: var(--bg-color);
-    border: 1px solid var(--color-stitulos);
+    border: 1px solid var(--atras-color);
     width: 230mm;
     border-radius: 24px;
     color: var(--text-color);
@@ -85,7 +96,7 @@ body {
 }
 
 .right-side p {
-    color: var(--color-titulos);
+    color: var(--text-color);
 }
 
 h4 {
@@ -134,7 +145,7 @@ h4 {
     gap: 24px;
     border-radius: 24px;
     box-shadow: 0px 6px 50px 0px;
-    background: #FFF;
+    background: var(--card-color);
 }
 
 .card h4 {
@@ -148,13 +159,13 @@ h4 {
 }
 
 .contacto {
-    background-color: whitesmoke;
+    background-color: var(--skills-color);
     border-radius: 24px;
 }
 
 .contacto p {
     font-size: 14px;
-    color: var(--color-titulos);
+    color: var(--text-color);
 }
 
 .estudios {
@@ -178,7 +189,7 @@ h4 {
 }
 
 li {
-    color: var(--color-titulos);
+    color: var(--text-color);
 }
 
 .iconos {
@@ -190,7 +201,7 @@ li {
     align-items: center;
     text-decoration: none;
     font-size: 13px;
-    color: var(--color-titulos);
+    color: var(--text-color);
     padding-left: 0px;
 }
 
@@ -214,7 +225,7 @@ li {
 }
 
 [id^="star"] {
-    animation: var(--animacion-star);
+    animation: var(--animacion-star, none);
 }
 
 #star2 {
@@ -247,11 +258,12 @@ li {
 }
 
 .main_option {
-    width: 40px;
-    height: 40px;
     background-color: var(--color-activo);
     border: var(--border-option);
     border-radius: 50%;
+
+    transition: transform .3s;
+    transform: var(--transform-option, none);
 }
 
 @keyframes rotate {
